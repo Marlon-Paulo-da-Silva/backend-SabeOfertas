@@ -17,11 +17,5 @@ app.use(express.json());
 app.use("/files", express.static(path.resolve(__dirname, "..", "uploads")));
 app.use(routes);
 
-const port = 3333 || 8080;
-app.listen(port, err => {
-  if (!err) {
-    console.log("rodando na porta: ", port);
-  } else {
-    console.log("erro na porta: ", err);
-  }
-});
+const port = 8080 || 3333;
+app.listen(port);
