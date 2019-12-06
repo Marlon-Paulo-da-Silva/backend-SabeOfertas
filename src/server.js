@@ -18,10 +18,4 @@ app.use("/files", express.static(path.resolve(__dirname, "..", "uploads")));
 app.use(routes);
 
 const port = process.env.PORT || 8080 || 3333;
-app.listen(port, err => {
-  if (!err) {
-    console.log("Servidor rodando");
-  } else {
-    console.log(err);
-  }
-});
+app.listen(port);

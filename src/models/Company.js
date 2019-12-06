@@ -22,7 +22,7 @@ const CompanySchema = mongoose.Schema(
 );
 
 CompanySchema.virtual("companyPicture_url").get(function() {
-  return `http://localhost:3333/files/${this.companyPicture}`;
+  return `https://sabeofertas.herokuapp.com/files/${this.companyPicture}`;
 });
 
 module.exports = mongoose.model("Company", CompanySchema);
