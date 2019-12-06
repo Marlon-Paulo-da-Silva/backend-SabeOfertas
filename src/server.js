@@ -12,10 +12,10 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-app.use(cors({ origin: "https://sabeofertas.netlify.com/" }));
+app.use(cors());
 app.use(express.json());
 app.use("/files", express.static(path.resolve(__dirname, "..", "uploads")));
 app.use(routes);
 
-const port = process.env.PORT || 8080 || 3333;
+const port = 3333 || 8080;
 app.listen(port);
